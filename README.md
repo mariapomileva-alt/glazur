@@ -2,7 +2,7 @@
 
 English marketing and policy pages built from your **GLAZUR** folder (`Downloads/GLAZUR` — Main page, About, Shipping & Returns, Care, Size guide, FAQs, Promo, socials). **Commerce stays on Shopify**; this site is easy to host on GitHub Pages, Netlify, or a subdomain (e.g. `www` on Shopify + `shop.` or vice versa — your choice).
 
-**Visual system (brand guide screenshots):** CSS variables in `css/tokens.css` follow the plum / gold / blush palette, split hero with an SVG wave, header logo **`assets/logos/лого 7.png`**. **Ysabeau** (local) = body copy per guide; **Syne** (Google Fonts) = stand-in for **LT Remark** (headings, nav, UI). When you have LT Remark webfonts, add `@font-face` and set `--font-heading` / `--font-ui` in `tokens.css`.
+**Visual system (brand guide screenshots):** CSS variables in `css/tokens.css` follow the plum / gold / blush palette, split hero with an SVG wave, header logo **`assets/logos/glazur-logo-yellow-swan.png`**. **Ysabeau** (local) = body copy per guide; **Syne** (Google Fonts) = stand-in for **LT Remark** (headings, nav, UI). When you have LT Remark webfonts, add `@font-face` and set `--font-heading` / `--font-ui` in `tokens.css`.
 
 ## Files
 

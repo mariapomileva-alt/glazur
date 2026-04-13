@@ -1384,6 +1384,117 @@ body.has-promo .site-header {
   margin-bottom: 0;
 }
 
+/* Featured products — after brand story */
+.ru-products {
+  padding: clamp(2.25rem, 5vw, 3.5rem) 0;
+  background: var(--color-surface);
+}
+
+.ru-products__eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  margin: 0 0 0.75rem;
+  text-align: center;
+}
+
+.ru-products__title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(1.65rem, 3.5vw, 2.35rem);
+  line-height: 1.15;
+  color: var(--color-hero-ink);
+  margin: 0 0 0.65rem;
+  text-align: center;
+}
+
+.ru-products__lead {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-ink-muted);
+  margin: 0 auto;
+  max-width: 36rem;
+  text-align: center;
+}
+
+.ru-products__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem 1.1rem;
+  margin-top: 1.85rem;
+}
+
+@media (max-width: 900px) {
+  .ru-products__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .ru-products__grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.ru-product-card {
+  margin: 0;
+}
+
+.ru-product-card__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ru-product-card__figure {
+  margin: 0;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--color-blush);
+  box-shadow: 0 8px 28px rgba(44, 18, 32, 0.06);
+}
+
+.ru-product-card__img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.28s ease;
+}
+
+.ru-product-card__link:hover .ru-product-card__img {
+  transform: scale(1.03);
+}
+
+.ru-product-card__meta {
+  padding: 0.9rem 0.1rem 0;
+}
+
+.ru-product-card__name {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 0.3rem;
+  color: var(--color-hero-ink);
+}
+
+.ru-product-card__tag {
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
 .ru-catalog {
   padding: clamp(2.25rem, 5vw, 3.5rem) 0 clamp(3rem, 7vw, 4.5rem);
   background: var(--color-bg);

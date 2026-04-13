@@ -1,0 +1,24 @@
+/* Локально: Ysabeau из архива «Шрифты». Заголовки / UI: Syne через Google Fonts в HTML (замена LT Remark). */
+@font-face {
+  font-family: "Ysabeau";
+  src: url("../assets/fonts/ysabeau/Ysabeau-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ysabeau";
+  src: url("../assets/fonts/ysabeau/Ysabeau-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ysabeau";
+  src: url("../assets/fonts/ysabeau/Ysabeau-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,127 @@
+/**
+ * Фоны из архива «Паттерны» (GLAZUR).
+ * Вектор «паттерн вектор.svg»: тайл лебедя, цвета #EFCAD0 / #D70C7A — согласованы с tokens --color-pattern-*.
+ * PNG: Group 66 (лёгкий), Frame 2541, Group 65, Frame 2540 — декоративные поля; крупные файлы только от lg breakpoint.
+ */
+
+.section--pattern-base {
+  position: relative;
+  isolation: isolate;
+}
+
+.section--pattern-base::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-repeat: repeat;
+  background-position: center top;
+  opacity: var(--pattern-opacity, 0.12);
+}
+
+.section--pattern-base > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Векторный паттерн — основной фирменный тайл */
+.section--pattern-svg::before {
+  background-image: url("../assets/patterns/паттерн вектор.svg");
+  background-size: clamp(300px, 52vw, 640px) auto;
+}
+
+.section--pattern-svg-dim::before {
+  opacity: var(--pattern-opacity, 0.07);
+}
+
+/* Мелкая текстура */
+.section--pattern-g66::before {
+  background-image: url("../assets/patterns/Group 66.png");
+  background-size: 260px auto;
+  opacity: var(--pattern-opacity, 0.14);
+}
+
+/* Мягкое «полотно» */
+.section--pattern-f2541::before {
+  background-image: url("../assets/patterns/Frame 2541.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: var(--pattern-opacity, 0.08);
+}
+
+/* Frame 2540: на мобиле — лёгкий тайл; на lg — полноэкранное полотно */
+.section--pattern-f2540::before {
+  background-image: url("../assets/patterns/Group 66.png");
+  background-size: 240px auto;
+  background-repeat: repeat;
+  opacity: var(--pattern-opacity, 0.1);
+}
+
+/* Крупные ассеты — широкие экраны */
+@media (min-width: 1024px) {
+  .section--pattern-g65::before {
+    background-image: url("../assets/patterns/Group 65.png");
+    background-repeat: no-repeat;
+    background-size: min(1600px, 140%);
+    background-position: center 20%;
+    opacity: var(--pattern-opacity, 0.06);
+  }
+
+  .section--pattern-f2540::before {
+    background-image: url("../assets/patterns/Frame 2540.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: var(--pattern-opacity, 0.05);
+  }
+}
+
+/* Детальный блок: мобиле — тайл Group 66; desktop — крупный Group 65 */
+.section--pattern-detail::before {
+  background-image: url("../assets/patterns/Group 66.png");
+  background-size: 240px auto;
+  background-repeat: repeat;
+  background-position: center top;
+  opacity: var(--pattern-opacity, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .section--pattern-detail::before {
+    background-image: url("../assets/patterns/Group 65.png");
+    background-repeat: no-repeat;
+    background-size: min(1600px, 135%);
+    background-position: center 25%;
+    opacity: var(--pattern-opacity, 0.065);
+  }
+}
+
+@media (prefers-contrast: more) {
+  .section--pattern-base::before {
+    opacity: 0.03;
+  }
+}
+
+/* Внутренние страницы: полоса под шапкой */
+.page-hero.page-hero--pattern {
+  position: relative;
+  isolation: isolate;
+}
+
+.page-hero.page-hero--pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("../assets/patterns/паттерн вектор.svg");
+  background-size: clamp(260px, 40vw, 480px) auto;
+  background-repeat: repeat;
+  opacity: 0.08;
+}
+
+.page-hero.page-hero--pattern > .container {
+  position: relative;
+  z-index: 1;
+}

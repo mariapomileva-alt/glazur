@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Glazur — this is your fairy tale. Natural fabrics, comfort that never fights with beauty, silhouettes that build a look without effort. Paris-designed, limited editions." />
+  <title>Glazur | This is your fairy tale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body class="page-home">
+  <div id="promo-bar" class="promo-bar">
+    <a href="#" id="promo-open-modal"><span id="promo-headline">Transform Your Day — Get 10% Off Your First Order</span></a>
+    <button type="button" class="promo-bar__close" id="promo-close" aria-label="Dismiss promotion">×</button>
+  </div>
+
+  <header class="site-header site-header--mirror site-header--shopru">
+    <div class="site-header__inner site-header__inner--shopru">
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="about.html">About</a>
+        <details class="nav-details">
+          <summary class="nav-details__summary">Catalog</summary>
+          <div class="nav-details__panel" role="group" aria-label="Catalog categories">
+            <a href="#" data-collection="blouses">Blouses</a>
+            <a href="#" data-collection="stripes">Striped tops</a>
+            <a href="#" data-collection="skirts">Skirts</a>
+            <a href="#" data-collection="dresses">Dresses</a>
+            <a href="#" data-collection="knitwear">Knitwear</a>
+            <a class="js-config-collection-default" href="#">Full collection</a>
+          </div>
+        </details>
+        <a href="#" data-collection="newArrivals">New in</a>
+        <a class="js-config-mailto" href="mailto:info@glazurshop.com">Contact</a>
+        <a href="about.html">Stories</a>
+        <div class="nav__cta">
+          <a class="btn btn--fill js-config-shop" href="#">Order</a>
+        </div>
+      </nav>
+      <a class="logo" href="index.html"><img class="logo__img" src="assets/logos/лого 7.png" width="180" height="60" alt="Glazur" decoding="async" /></a>
+      <div class="header-social" aria-label="Messengers and email">
+        <a class="header-social__link js-config-tg" href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram">TG</a>
+        <a class="header-social__link js-config-vk" href="#" target="_blank" rel="noopener noreferrer" aria-label="VK">VK</a>
+        <a class="header-social__link js-config-wa" href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a>
+        <a class="header-social__link header-social__link--mail js-config-mailto" href="mailto:info@glazurshop.com" aria-label="Email">@</a>
+      </div>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    </div>
+  </header>
+
+  <main class="home-main">
+    <section class="ru-hero" aria-labelledby="hero-title">
+      <div class="ru-hero__grid">
+        <div class="ru-hero__copy">
+          <p class="ru-hero__eyebrow">Natural fabrics · Paris-designed</p>
+          <h1 id="hero-title">This is your fairy tale</h1>
+          <p class="ru-hero__lead">
+            Clothing that makes you feel different. Natural fabrics, comfort that never competes with beauty, and silhouettes that build a look without effort.
+          </p>
+          <div class="ru-hero__actions">
+            <a class="btn btn--hero-pink js-config-collection-default" href="#">View catalog</a>
+            <a class="btn" href="#story">Read more</a>
+          </div>
+        </div>
+        <figure class="ru-hero__figure">
+          <img
+            class="ru-hero__img"
+            src="assets/brand/hero-pink-studio.png"
+            width="538"
+            height="716"
+            alt="Glazur — woman in a black and white striped sweatshirt with a flower appliqué and white trousers, seated on a soft pink background"
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <section class="ru-muses" aria-labelledby="muses-title">
+      <div class="container">
+        <p class="ru-muses__eyebrow">Your reviews</p>
+        <h2 id="muses-title" class="ru-muses__title">You in Glazur</h2>
+        <p class="ru-muses__sub">our beautiful muses</p>
+        <div class="ru-muses__gallery">
+          <figure>
+            <img
+              src="assets/muses/muse-1.png"
+              width="768"
+              height="1024"
+              alt="Glazur muse — white skirt and lavender blouse among large illustrated flower cutouts in a bright studio"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <figure>
+            <img
+              src="assets/muses/muse-4.png"
+              width="682"
+              height="1024"
+              alt="Glazur muse — Breton stripes and white trousers in front of a Parisian shop window with a farm-themed display"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <figure>
+            <img
+              src="assets/muses/muse-3.png"
+              width="768"
+              height="1024"
+              alt="Glazur muse — long white embroidered dress by a stone church wall with roses and icons in warm evening light"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+        <div class="ru-muses__footer">
+          <a class="btn js-config-ig" href="#">Load more</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="ru-philosophy">
+      <div class="container">
+        <h2 class="ru-philosophy__h"><span class="ru-hash">#</span> Soft transformation</h2>
+        <div class="ru-philosophy__body">
+          <p>
+            Glazur is a gentle shift in how you see yourself and your day. We believe in a soft transformation: not a loud reinvention, but a quiet return to what already suits you — natural fabrics, honest silhouettes, and details you notice when you slow down for a second.
+          </p>
+          <p>
+            Like glaze on a dessert, a small shine can change the whole impression. Our clothes are that kind of accent — enough to lift the mood, never enough to steal the scene from the person wearing them.
+          </p>
+          <p>
+            We work with cotton, linen, and tactile surfaces you want to touch. Lace, embroidery, a well-placed button: the capsule always carries a signature detail, a little ritual that makes an ordinary morning feel a bit more like yours.
+          </p>
+          <p>
+            This is not about chasing trends. It is about inner femininity — calm confidence, love for art and detail, and dressing that supports who you already are. From a busy morning to a graceful afternoon, Glazur is not only what you wear; it is how the day feels when the fabric, line, and light fall into place.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="ru-catalog" aria-labelledby="catalog-title">
+      <div class="container ru-catalog__inner">
+        <h2 id="catalog-title" class="ru-catalog__title">Catalog</h2>
+        <nav class="ru-catalog__links" aria-label="Product categories">
+          <a href="#" data-collection="blouses">Blouses</a>
+          <a href="#" data-collection="stripes">Striped tops</a>
+          <a href="#" data-collection="skirts">Skirts</a>
+          <a href="#" data-collection="dresses">Dresses</a>
+          <a href="#" data-collection="knitwear">Knitwear</a>
+          <a href="#" data-collection="newArrivals">New in</a>
+          <a class="js-config-collection-default" href="#">Full collection</a>
+        </nav>
+        <p class="ru-catalog__note">
+          Same categories as our <a href="https://glazurshop.ru" rel="noopener noreferrer">Russian shop</a> — this page is in English for international friends. Set collection URLs in the site config when you connect Shopify.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__grid">
+      <div>
+        <h3>Glazur</h3>
+        <p style="margin: 0; line-height: 1.6;">Natural fabrics and thoughtful details — from ordinary days to small moments of magic.</p>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <ul>
+          <li><a class="js-config-shop" href="#">All products</a></li>
+          <li><a class="js-config-collection-default" href="#">Full collection</a></li>
+          <li><a href="#" data-collection="newArrivals">New in</a></li>
+          <li><a href="shipping-returns.html">Delivery &amp; returns</a></li>
+          <li><a class="js-config-mailto" href="mailto:info@glazurshop.com">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Help &amp; policies</h3>
+        <ul>
+          <li><a href="size-guide.html">Size guide</a></li>
+          <li><a href="care.html">Care</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Terms of sale</a></li>
+          <li><a href="#">User agreement</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <form id="footer-newsletter-form">
+          <input type="email" name="email" required placeholder="Your email" autocomplete="email" aria-label="Email for newsletter" />
+          <button type="submit" class="btn btn--light" style="width: 100%; border-color: rgba(255,255,255,0.4);">Get my 10% off</button>
+          <p class="legal" id="promo-legal">By subscribing, you agree to receive marketing emails. Unsubscribe anytime.</p>
+        </form>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© <span id="y"></span> Glazur. All rights reserved.</span>
+      <a class="site-footer__lang" href="https://glazurshop.ru" target="_blank" rel="noopener noreferrer">Russian shop</a>
+      <div class="social-row">
+        <a class="js-config-ig" href="#">Instagram</a>
+        <a class="js-config-fb" href="#">Facebook</a>
+        <a class="js-config-pin" href="#">Pinterest</a>
+        <a class="js-config-yt" href="#">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="promo-modal" class="promo-modal" hidden>
+    <div class="promo-modal__overlay" aria-hidden="true"></div>
+    <div class="promo-modal__panel" role="dialog" aria-modal="true" aria-labelledby="promo-dialog-title">
+      <button type="button" class="promo-modal__close" aria-label="Close">×</button>
+      <h2 id="promo-dialog-title">Bonjour!</h2>
+      <p class="sub" id="promo-subline">Subscribe to receive your personal code and discover how Glazur can make everyday beautiful.</p>
+      <form id="promo-form">
+        <label class="sr-only" for="promo-email">Email</label>
+        <input id="promo-email" type="email" required placeholder="Your email" autocomplete="email" />
+        <button type="submit" class="btn btn--fill" style="width: 100%;" id="promo-cta">Get My 10% Off</button>
+        <p class="legal" id="promo-legal-modal">By subscribing, you agree to receive marketing emails. Unsubscribe anytime.</p>
+      </form>
+      <p id="promo-success" class="success" hidden>Your 10% code is on its way! Check your inbox.</p>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

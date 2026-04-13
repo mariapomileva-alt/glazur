@@ -1052,9 +1052,11 @@ body.has-promo .site-header {
 
 .header-social {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 0.3rem;
+  max-width: 100%;
 }
 
 .header-social__link {

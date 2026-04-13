@@ -37,6 +37,7 @@
     var s = cfg.social || {};
     var map = {
       "js-config-ig": s.instagram,
+      "js-config-th": s.threads,
       "js-config-fb": s.facebook,
       "js-config-yt": s.youtube,
       "js-config-pin": s.pinterest,

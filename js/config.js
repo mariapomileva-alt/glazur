@@ -27,6 +27,8 @@ window.GLAZUR_CONFIG = {
 
   social: {
     instagram: "https://www.instagram.com/glazurshop_com",
+    /** Same @ handle as Instagram when you have a Threads profile */
+    threads: "https://www.threads.net/@glazurshop_com",
     facebook: "https://www.facebook.com/glazurshop",
     youtube: "https://youtube.com/@glazurshop_com",
     pinterest: "https://www.pinterest.com/glazurshop_com",

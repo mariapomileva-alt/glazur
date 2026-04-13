@@ -1,0 +1,95 @@
+<footer class="site-footer">
+  <div class="site-footer__grid">
+    <div>
+      <h3>{{ shop.name }}</h3>
+      <p style="margin: 0; line-height: 1.6;">{{ section.settings.footer_tagline | escape }}</p>
+    </div>
+    <div>
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="{{ routes.all_products_collection_url }}">All products</a></li>
+        <li><a href="{% render 'glazur-collection-url', key: 'default' %}">Full collection</a></li>
+        <li><a href="{% render 'glazur-collection-url', key: 'new_arrivals' %}">New in</a></li>
+        <li>
+          <a href="{% if pages['shipping-returns'] != blank %}{{ pages['shipping-returns'].url }}{% else %}#{% endif %}">Delivery &amp; returns</a>
+        </li>
+        <li><a class="js-config-mailto" href="mailto:{{ settings.contact_email | escape }}">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Help &amp; policies</h3>
+      <ul>
+        <li>
+          <a href="{% if pages['size-guide'] != blank %}{{ pages['size-guide'].url }}{% else %}#{% endif %}">Size guide</a>
+        </li>
+        <li>
+          <a href="{% if pages['care'] != blank %}{{ pages['care'].url }}{% else %}#{% endif %}">Care</a>
+        </li>
+        <li>
+          <a href="{% if pages['faq'] != blank %}{{ pages['faq'].url }}{% else %}#{% endif %}">FAQ</a>
+        </li>
+        {% if shop.privacy_policy %}
+          <li><a href="{{ shop.privacy_policy.url }}">Privacy policy</a></li>
+        {% endif %}
+        {% if shop.refund_policy %}
+          <li><a href="{{ shop.refund_policy.url }}">Refund policy</a></li>
+        {% endif %}
+        {% if shop.terms_of_service %}
+          <li><a href="{{ shop.terms_of_service.url }}">Terms of service</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    <div class="footer-newsletter">
+      <h3>Newsletter</h3>
+      {% form 'customer', id: 'footer-newsletter-form' %}
+        <input type="hidden" name="contact[tags]" value="newsletter, glazur-site">
+        <input
+          type="email"
+          name="contact[email]"
+          required
+          placeholder="Your email"
+          autocomplete="email"
+          aria-label="Email for newsletter"
+        >
+        <button type="submit" class="btn btn--light" style="width: 100%; border-color: rgba(255,255,255,0.4);">Get my 10% off</button>
+        <p class="legal" id="promo-legal">{{ settings.promo_legal | escape }}</p>
+      {% endform %}
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <span>© <span id="y"></span> {{ shop.name }}. All rights reserved.</span>
+    {% if settings.russian_shop_url != blank %}
+      <a class="site-footer__lang" href="{{ settings.russian_shop_url }}" target="_blank" rel="noopener noreferrer">Russian shop</a>
+    {% endif %}
+    <div class="social-row">
+      {% if settings.social_instagram != blank %}
+        <a href="{{ settings.social_instagram }}" target="_blank" rel="noopener noreferrer">Instagram</a>
+      {% endif %}
+      {% if settings.social_facebook != blank %}
+        <a href="{{ settings.social_facebook }}" target="_blank" rel="noopener noreferrer">Facebook</a>
+      {% endif %}
+      {% if settings.social_pinterest != blank %}
+        <a href="{{ settings.social_pinterest }}" target="_blank" rel="noopener noreferrer">Pinterest</a>
+      {% endif %}
+      {% if settings.social_youtube != blank %}
+        <a href="{{ settings.social_youtube }}" target="_blank" rel="noopener noreferrer">YouTube</a>
+      {% endif %}
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Glazur footer",
+  "class": "section-glazur-footer",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "footer_tagline",
+      "label": "Tagline",
+      "default": "Natural fabrics and thoughtful details — from ordinary days to small moments of magic."
+    }
+  ],
+  "presets": [{ "name": "Glazur footer" }]
+}
+{% endschema %}

@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "header": {
+      "type": "glazur-header",
+      "settings": {}
+    },
+    "home": {
+      "type": "glazur-home",
+      "settings": {
+        "hero_heading": "This is your fairy tale",
+        "hero_lead": "Clothing that makes you feel different. Natural fabrics, comfort that never competes with beauty, and silhouettes that build a look without effort.",
+        "story_richtext": "<p>Glazur is a gentle shift in how you see yourself and your day. We believe in a soft transformation: not a loud reinvention, but a quiet return to what already suits you — natural fabrics, honest silhouettes, and details you notice when you slow down for a second.</p><p>Like glaze on a dessert, a small shine can change the whole impression. Our clothes are that kind of accent — enough to lift the mood, never enough to steal the scene from the person wearing them.</p><p>We work with cotton, linen, and tactile surfaces you want to touch. Lace, embroidery, a well-placed button: the capsule always carries a signature detail, a little ritual that makes an ordinary morning feel a bit more like yours.</p><p>This is not about chasing trends. It is about inner femininity — calm confidence, love for art and detail, and dressing that supports who you already are. From a busy morning to a graceful afternoon, Glazur is not only what you wear; it is how the day feels when the fabric, line, and light fall into place.</p>"
+      }
+    },
+    "footer": {
+      "type": "glazur-footer",
+      "settings": {}
+    }
+  },
+  "order": ["header", "home", "footer"]
+}

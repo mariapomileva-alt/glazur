@@ -1,0 +1,28 @@
+.product-main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+.collection-card-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.skip-to-content-link:focus {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  background: var(--color-surface, #fff);
+  color: var(--color-ink, #2c1220);
+  clip: auto;
+  width: auto;
+  height: auto;
+  margin: 0;
+}

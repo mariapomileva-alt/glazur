@@ -30,10 +30,6 @@ window.GLAZUR_CONFIG = {
     facebook: "https://www.facebook.com/glazurshop",
     youtube: "https://youtube.com/@glazurshop_com",
     pinterest: "https://www.pinterest.com/glazurshop_com",
-    /** RU-style header icons — paste real links from glazurshop.ru when ready */
-    telegram: "",
-    vk: "",
-    whatsapp: "",
   },
 
   /** Promo strip + modal (tone aligned with glazurshop.ru). Connect to Klaviyo / Shopify in production. */

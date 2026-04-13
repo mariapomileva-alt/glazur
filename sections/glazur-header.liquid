@@ -38,16 +38,7 @@
         loading="eager"
       >
     </a>
-    <div class="header-social" aria-label="Messengers and email">
-      {% if settings.social_telegram != blank %}
-        <a class="header-social__link" href="{{ settings.social_telegram }}" target="_blank" rel="noopener noreferrer" aria-label="Telegram">TG</a>
-      {% endif %}
-      {% if settings.social_vk != blank %}
-        <a class="header-social__link" href="{{ settings.social_vk }}" target="_blank" rel="noopener noreferrer" aria-label="VK">VK</a>
-      {% endif %}
-      {% if settings.social_whatsapp != blank %}
-        <a class="header-social__link" href="{{ settings.social_whatsapp }}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a>
-      {% endif %}
+    <div class="header-social" aria-label="Email">
       <a class="header-social__link header-social__link--mail js-config-mailto" href="mailto:{{ settings.contact_email | escape }}" aria-label="Email">@</a>
     </div>
     <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>

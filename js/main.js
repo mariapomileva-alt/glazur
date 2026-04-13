@@ -40,9 +40,6 @@
       "js-config-fb": s.facebook,
       "js-config-yt": s.youtube,
       "js-config-pin": s.pinterest,
-      "js-config-tg": s.telegram,
-      "js-config-vk": s.vk,
-      "js-config-wa": s.whatsapp,
     };
     Object.keys(map).forEach(function (cls) {
       $$("." + cls).forEach(function (a) {

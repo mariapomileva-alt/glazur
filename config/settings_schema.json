@@ -42,21 +42,6 @@
       },
       {
         "type": "url",
-        "id": "social_telegram",
-        "label": "Telegram"
-      },
-      {
-        "type": "url",
-        "id": "social_vk",
-        "label": "VK"
-      },
-      {
-        "type": "url",
-        "id": "social_whatsapp",
-        "label": "WhatsApp"
-      },
-      {
-        "type": "url",
         "id": "russian_shop_url",
         "label": "Russian storefront URL",
         "default": "https://glazurshop.ru"

@@ -1187,26 +1187,26 @@ body.has-promo .site-header {
 
 /* Главная: светлый лендинг, порядок как на русской витрине */
 .ru-hero {
-  padding: clamp(1.35rem, 3.5vw, 2.5rem) 0 clamp(1.5rem, 4vw, 2.75rem);
+  padding: clamp(1rem, 2.5vw, 1.85rem) 0 clamp(1.15rem, 3vw, 2.15rem);
   background: var(--color-hero-cream);
   border-bottom: 1px solid rgba(74, 50, 40, 0.08);
 }
 
 .ru-hero__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.78fr);
-  gap: clamp(1rem, 2.8vw, 2.25rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(0.75rem, 2vw, 1.65rem);
   align-items: center;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0 clamp(1.25rem, 4vw, 2rem);
+  padding: 0 clamp(0.85rem, 3vw, 1.5rem);
 }
 
 @media (min-width: 781px) {
   .ru-hero__figure {
-    max-width: min(100%, 340px);
+    max-width: min(100%, 400px);
     width: 100%;
-    justify-self: end;
+    justify-self: center;
   }
 }
 
@@ -1217,7 +1217,7 @@ body.has-promo .site-header {
   }
 
   .ru-hero__figure {
-    max-width: min(100%, 320px);
+    max-width: min(100%, 380px);
     margin-left: auto;
     margin-right: auto;
   }
@@ -1275,19 +1275,14 @@ body.has-promo .site-header {
 
 .ru-hero__figure {
   margin: 0;
-  border-radius: 2px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.65);
-  box-shadow: 0 12px 40px rgba(44, 18, 32, 0.06);
+  padding: 0;
+  border-radius: 0;
+  overflow: visible;
+  background: transparent;
+  box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media (min-width: 781px) {
-  .ru-hero__figure {
-    justify-content: flex-end;
-  }
 }
 
 .ru-hero__img {
@@ -1295,7 +1290,7 @@ body.has-promo .site-header {
   width: auto;
   max-width: 100%;
   height: auto;
-  max-height: min(48vh, 460px);
+  max-height: min(56vh, 530px);
   object-fit: contain;
 }
 

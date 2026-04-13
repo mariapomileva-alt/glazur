@@ -1,17 +1,22 @@
 /**
  * Glazur — edit links and storefront URLs here only.
- * Shopify: replace YOUR-STORE with your shop subdomain or use custom domain.
+ * Store admin: https://admin.shopify.com/store/glazurshop
+ * Customer storefront: use primary domain in Shopify (Online Store → Domains), or .myshopify.com below.
  */
 window.GLAZUR_CONFIG = {
   brandName: "Glazur",
 
   email: "info@glazurshop.com",
 
-  shopifyStoreUrl: "https://YOUR-STORE.myshopify.com",
+  /** Glazur Shopify store (slug glazurshop). Swap for your primary domain if buyers never see .myshopify.com */
+  shopifyStoreUrl: "https://glazurshop.myshopify.com",
   /** Default collection when a specific collection URL is not set */
-  shopifyDefaultCollectionUrl: "https://YOUR-STORE.myshopify.com/collections/all",
+  shopifyDefaultCollectionUrl: "https://glazurshop.myshopify.com/collections/all",
 
-  /** Optional: deep links for catalog (mirror glazurshop.ru categories) */
+  /**
+   * Optional: full URLs to each collection (Products → Collections → open collection → copy storefront URL).
+   * Leave "" to use shopifyDefaultCollectionUrl for that link.
+   */
   collections: {
     newArrivals: "",
     blouses: "",

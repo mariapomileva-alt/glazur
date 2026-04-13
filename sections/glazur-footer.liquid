@@ -58,9 +58,6 @@
   </div>
   <div class="site-footer__bottom">
     <span>© <span id="y"></span> {{ shop.name }}. All rights reserved.</span>
-    {% if settings.russian_shop_url != blank %}
-      <a class="site-footer__lang" href="{{ settings.russian_shop_url }}" target="_blank" rel="noopener noreferrer">Russian shop</a>
-    {% endif %}
     <div class="social-row">
       {% if settings.social_instagram != blank %}
         <a href="{{ settings.social_instagram }}" target="_blank" rel="noopener noreferrer">Instagram</a>

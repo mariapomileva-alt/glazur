@@ -1187,25 +1187,39 @@ body.has-promo .site-header {
 
 /* Главная: светлый лендинг, порядок как на русской витрине */
 .ru-hero {
-  padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(2.5rem, 6vw, 4rem);
+  padding: clamp(1.35rem, 3.5vw, 2.5rem) 0 clamp(1.5rem, 4vw, 2.75rem);
   background: var(--color-hero-cream);
   border-bottom: 1px solid rgba(74, 50, 40, 0.08);
 }
 
 .ru-hero__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(1.5rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.78fr);
+  gap: clamp(1rem, 2.8vw, 2.25rem);
   align-items: center;
   max-width: var(--max);
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 2rem);
 }
 
+@media (min-width: 781px) {
+  .ru-hero__figure {
+    max-width: min(100%, 340px);
+    width: 100%;
+    justify-self: end;
+  }
+}
+
 @media (max-width: 780px) {
   .ru-hero__grid {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .ru-hero__figure {
+    max-width: min(100%, 320px);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .ru-hero__actions {
@@ -1273,6 +1287,7 @@ body.has-promo .site-header {
   display: block;
   object-fit: cover;
   aspect-ratio: 3 / 4;
+  max-height: min(42vh, 420px);
 }
 
 /* «Вы в Glazur» — три вертикали как на glazurshop.ru */

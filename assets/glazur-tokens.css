@@ -7,8 +7,8 @@
   /* Упаковка: лайм + роза */
   --color-pack-lime: #8dc63f;
   --color-pack-lime-deep: #72a82e;
-  --color-pack-pink: #f4d4e0;
-  --color-pack-pink-mid: #e8b8cc;
+  --color-pack-pink: #e58bad;
+  --color-pack-pink-mid: #e58bad;
   --color-hero-panel: var(--color-pack-lime);
 
   /* Бордо / сезонный акцент (футер, кнопки, контраст) */
@@ -26,30 +26,30 @@
 
   /* Фоны страницы (светлая «витрина» как glazurshop.ru) */
   --color-bg: #fdf8fa;
-  --color-blush: #f7e8ee;
+  --color-blush: #e58bad;
   --color-surface: #ffffff;
   --color-cream-pale: #faf6ed;
   --color-line: #e8c4d4;
 
   /* Витрина как glazurshop.ru: розовая шапка, кремовый герой */
-  --color-shop-header: #f5b8ce;
+  --color-shop-header: #e58bad;
   --color-shop-header-border: rgba(255, 255, 255, 0.22);
   --color-hero-cream: #faf6ef;
   --color-hero-ink: #4a3228;
-  --color-hero-cta: #e895b0;
-  --color-hero-cta-hover: #d97897;
+  --color-hero-cta: #e58bad;
+  --color-hero-cta-hover: #e58bad;
 
   /* Акценты */
   --color-accent: #d4146b;
   --color-accent-hover: #b01058;
-  --color-accent-soft: #fbcfe0;
+  --color-accent-soft: #e58bad;
   --color-magenta: #d70c7a;
   --color-olive: var(--color-pack-lime-deep);
   --color-lavender: var(--color-pack-pink-mid);
-  --color-rose-ui: #e67e9e;
+  --color-rose-ui: #e58bad;
 
   /* Паттерн-вектор (архив) */
-  --color-pattern-surface: #efcad0;
+  --color-pattern-surface: #e58bad;
   --color-pattern-deep: #d70c7a;
 
   --font-heading: "Syne", system-ui, sans-serif;

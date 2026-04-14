@@ -1,14 +1,14 @@
 <div id="promo-bar" class="promo-bar">
-  <a href="#" id="promo-open-modal">
+  <button type="button" class="promo-bar__open" id="promo-open-modal" aria-haspopup="dialog">
     <span id="promo-headline">{{ settings.promo_bar_text | escape }}</span>
-  </a>
+  </button>
   <button type="button" class="promo-bar__close" id="promo-close" aria-label="Dismiss promotion">×</button>
 </div>
 
 <header class="site-header site-header--mirror site-header--shopru">
   <div class="site-header__inner site-header__inner--shopru">
     <nav class="nav" id="site-nav" aria-label="Primary">
-      <a href="{% if pages.about != blank %}{{ pages.about.url }}{% else %}#{% endif %}">About</a>
+      <a href="{% if pages.about != blank %}{{ pages.about.url }}{% else %}{{ routes.root_url }}{% endif %}">About</a>
       <details class="nav-details">
         <summary class="nav-details__summary">Catalog</summary>
         <div class="nav-details__panel" role="group" aria-label="Catalog categories">
@@ -22,7 +22,7 @@
       </details>
       <a href="{% render 'glazur-collection-url', key: 'new_arrivals' %}">New in</a>
       <a class="js-config-mailto" href="mailto:{{ settings.contact_email | escape }}">Contact</a>
-      <a href="{% if pages.about != blank %}{{ pages.about.url }}{% else %}#{% endif %}">Stories</a>
+      <a class="nav__story" href="{{ routes.root_url }}#story">Stories</a>
       <div class="nav__cta">
         <a class="btn btn--fill" href="{{ routes.all_products_collection_url }}">Order</a>
       </div>

@@ -6,6 +6,38 @@
     return Array.prototype.slice.call((root || document).querySelectorAll(sel));
   }
 
+  function normPath(p) {
+    if (p == null || p === "") return "/";
+    var s = String(p).replace(/\/+$/, "");
+    return s === "" ? "/" : s;
+  }
+
+  /** На главной иногда якорь /#story не прокручивает; пути сравниваем в нормализованном виде (/, /en-us). */
+  function storyNavFromHeader() {
+    $$("#site-nav a.nav__story").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        var story = document.getElementById("story");
+        var raw = a.getAttribute("href");
+        if (!raw || raw === "#") return;
+        var u;
+        try {
+          u = new URL(raw, window.location.origin);
+        } catch (err) {
+          return;
+        }
+        if (u.hash !== "#story") return;
+        if (normPath(u.pathname) !== normPath(window.location.pathname)) return;
+        if (!story) return;
+        e.preventDefault();
+        story.scrollIntoView({ behavior: "smooth", block: "start" });
+        try {
+          history.replaceState(null, "", u.pathname + (u.search || "") + "#story");
+        } catch (e2) {}
+      });
+    });
+  }
+
   function navToggle() {
     var btn = $("#nav-toggle");
     var nav = $("#site-nav");
@@ -134,6 +166,7 @@
 
   function init() {
     yearFooter();
+    storyNavFromHeader();
     navToggle();
     promoBar();
     promoModal();

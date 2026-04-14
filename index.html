@@ -16,7 +16,7 @@
 </head>
 <body class="page-home">
   <div id="promo-bar" class="promo-bar">
-    <a href="#" id="promo-open-modal"><span id="promo-headline">Transform Your Day — Get 10% Off Your First Order</span></a>
+    <button type="button" class="promo-bar__open" id="promo-open-modal" aria-haspopup="dialog"><span id="promo-headline">Transform Your Day — Get 10% Off Your First Order</span></button>
     <button type="button" class="promo-bar__close" id="promo-close" aria-label="Dismiss promotion">×</button>
   </div>
 
@@ -37,7 +37,7 @@
         </details>
         <a href="#" data-collection="newArrivals">New in</a>
         <a class="js-config-mailto" href="mailto:info@glazurshop.com">Contact</a>
-        <a href="about.html">Stories</a>
+        <a class="nav__story" href="#story">Stories</a>
         <div class="nav__cta">
           <a class="btn btn--fill js-config-shop" href="#">Order</a>
         </div>
@@ -93,7 +93,7 @@
               src="assets/muses/muse-1.png"
               width="768"
               height="1024"
-              alt="Glazur muse — white skirt and lavender blouse among large illustrated flower cutouts in a bright studio"
+              alt="Glazur muse — pink striped top with floral applique and white skirt on a blue sofa"
               loading="lazy"
               decoding="async"
             />
@@ -130,141 +130,17 @@
         <h2 class="ru-philosophy__h"><span class="ru-hash">#</span> Soft transformation</h2>
         <div class="ru-philosophy__body">
           <p>
-            Glazur is a gentle shift in how you see yourself and your day. We believe in a soft transformation: not a loud reinvention, but a quiet return to what already suits you — natural fabrics, honest silhouettes, and details you notice when you slow down for a second.
+            Glazur is a gentle shift in how you see yourself and move through your day. We believe in soft transformation—not a dramatic reinvention, but a quiet return to what already feels right: natural fabrics, clean silhouettes, and thoughtful details you notice when you slow down.
           </p>
           <p>
-            Like glaze on a dessert, a small shine can change the whole impression. Our clothes are that kind of accent — enough to lift the mood, never enough to steal the scene from the person wearing them.
+            Like glaze on a dessert, a subtle finish can change the entire impression. Our pieces work the same way—they elevate your look without pulling focus from you.
           </p>
           <p>
-            We work with cotton, linen, and tactile surfaces you want to touch. Lace, embroidery, a well-placed button: the capsule always carries a signature detail, a little ritual that makes an ordinary morning feel a bit more like yours.
+            We work in cotton, linen, and tactile fabrics you'll want to reach for on repeat. Lace, embroidery, a carefully placed button—each piece carries a signature detail, something small that makes an everyday moment feel a little more considered.
           </p>
           <p>
-            This is not about chasing trends. It is about inner femininity — calm confidence, love for art and detail, and dressing that supports who you already are. From a busy morning to a graceful afternoon, Glazur is not only what you wear; it is how the day feels when the fabric, line, and light fall into place.
+            We're not here to chase trends. We're after a quieter kind of femininity: ease, confidence, and letting beauty live in the details. From a busy morning to a slower afternoon, it's not just what you wear—it's how your day feels when everything falls into place.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="about-products" class="ru-products" aria-labelledby="products-title">
-      <div class="container">
-        <p class="ru-products__eyebrow">Products</p>
-        <h2 id="products-title" class="ru-products__title">Featured pieces</h2>
-        <p class="ru-products__lead">A few favorites from the current line — tap through to the shop.</p>
-        <div class="ru-products__grid">
-          <article class="ru-product-card">
-            <a class="ru-product-card__link" href="#" data-collection="stripes">
-              <figure class="ru-product-card__figure">
-                <img
-                  class="ru-product-card__img"
-                  src="assets/brand/glazur-featured-stripes-violet.png"
-                  width="768"
-                  height="1024"
-                  alt="Glazur — violet striped long-sleeve top with black trousers, purple studio backdrop and illustrated flower prop"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-              <div class="ru-product-card__meta">
-                <h3 class="ru-product-card__name">Violet striped top</h3>
-                <p class="ru-product-card__tag">Striped tops</p>
-              </div>
-            </a>
-          </article>
-          <article class="ru-product-card">
-            <a class="ru-product-card__link" href="#" data-collection="blouses">
-              <figure class="ru-product-card__figure">
-                <img
-                  class="ru-product-card__img"
-                  src="assets/muses/muse-1.png"
-                  width="768"
-                  height="1024"
-                  alt="Lavender blouse and white skirt"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-              <div class="ru-product-card__meta">
-                <h3 class="ru-product-card__name">Lavender &amp; white duo</h3>
-                <p class="ru-product-card__tag">Blouses</p>
-              </div>
-            </a>
-          </article>
-          <article class="ru-product-card">
-            <a class="ru-product-card__link" href="#" data-collection="stripes">
-              <figure class="ru-product-card__figure">
-                <img
-                  class="ru-product-card__img"
-                  src="assets/muses/muse-4.png"
-                  width="682"
-                  height="1024"
-                  alt="Breton stripes with white trousers in Paris"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-              <div class="ru-product-card__meta">
-                <h3 class="ru-product-card__name">Paris stripe look</h3>
-                <p class="ru-product-card__tag">Striped tops</p>
-              </div>
-            </a>
-          </article>
-          <article class="ru-product-card">
-            <a class="ru-product-card__link" href="#" data-collection="dresses">
-              <figure class="ru-product-card__figure">
-                <img
-                  class="ru-product-card__img"
-                  src="assets/muses/muse-3.png"
-                  width="768"
-                  height="1024"
-                  alt="Long white embroidered dress"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-              <div class="ru-product-card__meta">
-                <h3 class="ru-product-card__name">Embroidered white dress</h3>
-                <p class="ru-product-card__tag">Dresses</p>
-              </div>
-            </a>
-          </article>
-          <article class="ru-product-card">
-            <a class="ru-product-card__link" href="#" data-collection="knitwear">
-              <figure class="ru-product-card__figure">
-                <img
-                  class="ru-product-card__img"
-                  src="assets/muses/muse-2.png"
-                  width="768"
-                  height="1024"
-                  alt="Soft knit and relaxed silhouette"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-              <div class="ru-product-card__meta">
-                <h3 class="ru-product-card__name">Soft knit moment</h3>
-                <p class="ru-product-card__tag">Knitwear</p>
-              </div>
-            </a>
-          </article>
-          <article class="ru-product-card">
-            <a class="ru-product-card__link" href="#" data-collection="skirts">
-              <figure class="ru-product-card__figure">
-                <img
-                  class="ru-product-card__img"
-                  src="assets/muses/muse-5.png"
-                  width="768"
-                  height="1024"
-                  alt="Skirt and top editorial look"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-              <div class="ru-product-card__meta">
-                <h3 class="ru-product-card__name">Sculpted skirt story</h3>
-                <p class="ru-product-card__tag">Skirts</p>
-              </div>
-            </a>
-          </article>
         </div>
       </div>
     </section>

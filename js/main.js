@@ -47,6 +47,19 @@
         if (map[cls]) a.href = map[cls];
       });
     });
+
+    var base = (cfg.shopifyStoreUrl || "").replace(/\/+$/, "");
+    if (base) {
+      [
+        [".js-config-policy-privacy", "/policies/privacy-policy"],
+        [".js-config-policy-refund", "/policies/refund-policy"],
+        [".js-config-policy-terms", "/policies/terms-of-service"],
+      ].forEach(function (row) {
+        $$(row[0]).forEach(function (a) {
+          a.href = base + row[1];
+        });
+      });
+    }
   }
 
   function applyPromoCopy() {

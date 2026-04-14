@@ -10,32 +10,45 @@
         <li><a href="{{ routes.all_products_collection_url }}">All products</a></li>
         <li><a href="{% render 'glazur-collection-url', key: 'default' %}">Full collection</a></li>
         <li>
-          <a href="{% if pages['shipping-returns'] != blank %}{{ pages['shipping-returns'].url }}{% else %}#{% endif %}">Delivery &amp; returns</a>
+          <a href="{% render 'glazur-page-url', handle: 'shipping-returns' %}">Delivery &amp; returns</a>
         </li>
-        <li><a class="js-config-mailto" href="mailto:{{ settings.contact_email | escape }}">Contact</a></li>
+        <li>
+          <a
+            class="js-config-mailto"
+            href="mailto:{{ settings.contact_email | default: shop.email | escape }}"
+          >
+            Contact
+          </a>
+        </li>
       </ul>
     </div>
     <div>
       <h3>Help &amp; policies</h3>
       <ul>
         <li>
-          <a href="{% if pages['size-guide'] != blank %}{{ pages['size-guide'].url }}{% else %}#{% endif %}">Size guide</a>
+          <a href="{% render 'glazur-page-url', handle: 'size-guide' %}">Size guide</a>
         </li>
         <li>
-          <a href="{% if pages['care'] != blank %}{{ pages['care'].url }}{% else %}#{% endif %}">Care</a>
+          <a href="{% render 'glazur-page-url', handle: 'care' %}">Care</a>
         </li>
         <li>
-          <a href="{% if pages['faq'] != blank %}{{ pages['faq'].url }}{% else %}#{% endif %}">FAQ</a>
+          <a href="{% render 'glazur-page-url', handle: 'faq' %}">FAQ</a>
         </li>
-        {% if shop.privacy_policy %}
-          <li><a href="{{ shop.privacy_policy.url }}">Privacy policy</a></li>
-        {% endif %}
-        {% if shop.refund_policy %}
-          <li><a href="{{ shop.refund_policy.url }}">Refund policy</a></li>
-        {% endif %}
-        {% if shop.terms_of_service %}
-          <li><a href="{{ shop.terms_of_service.url }}">Terms of service</a></li>
-        {% endif %}
+        <li>
+          <a href="{% if shop.privacy_policy != blank %}{{ shop.privacy_policy.url }}{% else %}{{ routes.root_url }}policies/privacy-policy{% endif %}">
+            Privacy policy
+          </a>
+        </li>
+        <li>
+          <a href="{% if shop.refund_policy != blank %}{{ shop.refund_policy.url }}{% else %}{{ routes.root_url }}policies/refund-policy{% endif %}">
+            Refund policy
+          </a>
+        </li>
+        <li>
+          <a href="{% if shop.terms_of_service != blank %}{{ shop.terms_of_service.url }}{% else %}{{ routes.root_url }}policies/terms-of-service{% endif %}">
+            Terms of service
+          </a>
+        </li>
       </ul>
     </div>
     <div class="footer-newsletter">

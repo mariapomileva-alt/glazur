@@ -91,6 +91,73 @@
     </div>
   </section>
 
+  <section id="about-products" class="ru-products" aria-labelledby="products-title">
+    <div class="container">
+      <p class="ru-products__eyebrow">Products</p>
+      <h2 id="products-title" class="ru-products__title">Featured pieces</h2>
+      <p class="ru-products__lead">A few favorites from the current line — tap through to the shop.</p>
+      <div class="ru-products__grid">
+        <article class="ru-product-card">
+          <a class="ru-product-card__link" href="{% render 'glazur-collection-url', key: 'stripes' %}">
+            <figure class="ru-product-card__figure">
+              <img
+                class="ru-product-card__img"
+                src="{{ 'glazur-featured-stripes-violet.png' | asset_url }}"
+                width="768"
+                height="1024"
+                alt="Violet striped top"
+                loading="lazy"
+                decoding="async"
+              >
+            </figure>
+            <div class="ru-product-card__meta">
+              <h3 class="ru-product-card__name">Violet striped top</h3>
+              <p class="ru-product-card__tag">Striped tops</p>
+            </div>
+          </a>
+        </article>
+        <article class="ru-product-card">
+          <a class="ru-product-card__link" href="{% render 'glazur-collection-url', key: 'blouses' %}">
+            <figure class="ru-product-card__figure">
+              <img
+                class="ru-product-card__img"
+                src="{{ 'glazur-muse-1.png' | asset_url }}"
+                width="768"
+                height="1024"
+                alt="Soft knit moment"
+                loading="lazy"
+                decoding="async"
+              >
+            </figure>
+            <div class="ru-product-card__meta">
+              <h3 class="ru-product-card__name">Soft knit moment</h3>
+              <p class="ru-product-card__tag">Knitwear</p>
+            </div>
+          </a>
+        </article>
+        <article class="ru-product-card">
+          <a class="ru-product-card__link" href="{% render 'glazur-collection-url', key: 'skirts' %}">
+            <figure class="ru-product-card__figure">
+              <img
+                class="ru-product-card__img"
+                src="{{ 'glazur-muse-5.png' | asset_url }}"
+                width="768"
+                height="1024"
+                alt="Sculpted skirt story"
+                loading="lazy"
+                decoding="async"
+              >
+            </figure>
+            <div class="ru-product-card__meta">
+              <h3 class="ru-product-card__name">Sculpted skirt story</h3>
+              <p class="ru-product-card__tag">Skirts</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="ru-catalog" aria-labelledby="catalog-title">
     <div class="container ru-catalog__inner">
       <h2 id="catalog-title" class="ru-catalog__title">Catalog</h2>

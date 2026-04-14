@@ -9,7 +9,6 @@
       <ul>
         <li><a href="{{ routes.all_products_collection_url }}">All products</a></li>
         <li><a href="{% render 'glazur-collection-url', key: 'default' %}">Full collection</a></li>
-        <li><a href="{% render 'glazur-collection-url', key: 'new_arrivals' %}">New in</a></li>
         <li>
           <a href="{% if pages['shipping-returns'] != blank %}{{ pages['shipping-returns'].url }}{% else %}#{% endif %}">Delivery &amp; returns</a>
         </li>

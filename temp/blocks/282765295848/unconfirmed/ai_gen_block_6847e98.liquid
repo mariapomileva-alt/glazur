@@ -1,6 +1,475 @@
+{% doc %}
+  @prompt
+    care
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-care-instructions-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    padding: {{ block.settings.padding }}px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-care-instructions__header-{{ ai_gen_id }} {
+    margin-bottom: 24px;
+  }
+
+  .ai-care-instructions__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0 0 8px 0;
+  }
+
+  .ai-care-instructions__description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    color: {{ block.settings.text_color }};
+    opacity: 0.8;
+    margin: 0;
+  }
+
+  .ai-care-instructions__grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+
+  .ai-care-instructions__item-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .ai-care-instructions__icon-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: {{ block.settings.icon_background }};
+    border-radius: 50%;
+    padding: 16px;
+  }
+
+  .ai-care-instructions__icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    stroke: {{ block.settings.icon_color }};
+    fill: none;
+  }
+
+  .ai-care-instructions__label-{{ ai_gen_id }} {
+    font-size: {{ block.settings.label_size }}px;
+    color: {{ block.settings.text_color }};
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .ai-care-instructions__text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.instruction_size }}px;
+    color: {{ block.settings.text_color }};
+    opacity: 0.7;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-care-instructions__grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat({{ block.settings.columns_mobile }}, 1fr);
+      gap: 20px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-care-instructions-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.title != blank or block.settings.description != blank %}
+    <div class="ai-care-instructions__header-{{ ai_gen_id }}">
+      {% if block.settings.title != blank %}
+        <h2 class="ai-care-instructions__title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+      {% endif %}
+      {% if block.settings.description != blank %}
+        <div class="ai-care-instructions__description-{{ ai_gen_id }}">{{ block.settings.description }}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="ai-care-instructions__grid-{{ ai_gen_id }}">
+    {% if block.settings.show_washing %}
+      <div class="ai-care-instructions__item-{{ ai_gen_id }}">
+        <div class="ai-care-instructions__icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 6h18M3 6v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+            <circle cx="12" cy="14" r="3"/>
+          </svg>
+        </div>
+        <h3 class="ai-care-instructions__label-{{ ai_gen_id }}">{{ block.settings.washing_label }}</h3>
+        <p class="ai-care-instructions__text-{{ ai_gen_id }}">{{ block.settings.washing_text }}</p>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_drying %}
+      <div class="ai-care-instructions__item-{{ ai_gen_id }}">
+        <div class="ai-care-instructions__icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <h3 class="ai-care-instructions__label-{{ ai_gen_id }}">{{ block.settings.drying_label }}</h3>
+        <p class="ai-care-instructions__text-{{ ai_gen_id }}">{{ block.settings.drying_text }}</p>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_ironing %}
+      <div class="ai-care-instructions__item-{{ ai_gen_id }}">
+        <div class="ai-care-instructions__icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v4M9 18h6a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3H9a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3z"/>
+            <path d="M6 18v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2"/>
+          </svg>
+        </div>
+        <h3 class="ai-care-instructions__label-{{ ai_gen_id }}">{{ block.settings.ironing_label }}</h3>
+        <p class="ai-care-instructions__text-{{ ai_gen_id }}">{{ block.settings.ironing_text }}</p>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_bleaching %}
+      <div class="ai-care-instructions__item-{{ ai_gen_id }}">
+        <div class="ai-care-instructions__icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+        </div>
+        <h3 class="ai-care-instructions__label-{{ ai_gen_id }}">{{ block.settings.bleaching_label }}</h3>
+        <p class="ai-care-instructions__text-{{ ai_gen_id }}">{{ block.settings.bleaching_text }}</p>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_dry_cleaning %}
+      <div class="ai-care-instructions__item-{{ ai_gen_id }}">
+        <div class="ai-care-instructions__icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <h3 class="ai-care-instructions__label-{{ ai_gen_id }}">{{ block.settings.dry_cleaning_label }}</h3>
+        <p class="ai-care-instructions__text-{{ ai_gen_id }}">{{ block.settings.dry_cleaning_text }}</p>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_storage %}
+      <div class="ai-care-instructions__item-{{ ai_gen_id }}">
+        <div class="ai-care-instructions__icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="9" y1="3" x2="9" y2="21"/>
+            <line x1="15" y1="3" x2="15" y2="21"/>
+          </svg>
+        </div>
+        <h3 class="ai-care-instructions__label-{{ ai_gen_id }}">{{ block.settings.storage_label }}</h3>
+        <p class="ai-care-instructions__text-{{ ai_gen_id }}">{{ block.settings.storage_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Care instructions",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>Care instructions</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Follow these guidelines to keep your garment looking beautiful</p>"
+    },
+    {
+      "type": "header",
+      "content": "Washing"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_washing",
+      "label": "Show washing",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "washing_label",
+      "label": "Label",
+      "default": "Machine wash"
+    },
+    {
+      "type": "text",
+      "id": "washing_text",
+      "label": "Instructions",
+      "default": "Cold water, gentle cycle"
+    },
+    {
+      "type": "header",
+      "content": "Drying"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_drying",
+      "label": "Show drying",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "drying_label",
+      "label": "Label",
+      "default": "Air dry"
+    },
+    {
+      "type": "text",
+      "id": "drying_text",
+      "label": "Instructions",
+      "default": "Lay flat to dry"
+    },
+    {
+      "type": "header",
+      "content": "Ironing"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_ironing",
+      "label": "Show ironing",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "ironing_label",
+      "label": "Label",
+      "default": "Iron low"
+    },
+    {
+      "type": "text",
+      "id": "ironing_text",
+      "label": "Instructions",
+      "default": "Low heat, inside out"
+    },
+    {
+      "type": "header",
+      "content": "Bleaching"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bleaching",
+      "label": "Show bleaching",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "bleaching_label",
+      "label": "Label",
+      "default": "No bleach"
+    },
+    {
+      "type": "text",
+      "id": "bleaching_text",
+      "label": "Instructions",
+      "default": "Do not use bleach"
+    },
+    {
+      "type": "header",
+      "content": "Dry cleaning"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dry_cleaning",
+      "label": "Show dry cleaning",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "dry_cleaning_label",
+      "label": "Label",
+      "default": "Dry clean only"
+    },
+    {
+      "type": "text",
+      "id": "dry_cleaning_text",
+      "label": "Instructions",
+      "default": "Professional dry clean"
+    },
+    {
+      "type": "header",
+      "content": "Storage"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_storage",
+      "label": "Show storage",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "storage_label",
+      "label": "Label",
+      "default": "Storage"
+    },
+    {
+      "type": "text",
+      "id": "storage_text",
+      "label": "Instructions",
+      "default": "Fold and store in cool, dry place"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "Padding",
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "icon_background",
+      "label": "Icon background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Description size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon size",
+      "min": 30,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "label_size",
+      "label": "Label size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "instruction_size",
+      "label": "Instruction size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    }
+  ],
+  "presets": [
+    {
+      "name": "Care instructions"
+    }
+  ]
+}
 {% endschema %}

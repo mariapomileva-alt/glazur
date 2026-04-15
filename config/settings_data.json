@@ -15,6 +15,7 @@
     "size_guide_img_waist": "shopify://shop_images/Screenshot_2026-04-16_at_00.08.23.png",
     "size_guide_img_hips": "shopify://shop_images/Screenshot_2026-04-16_at_00.08.41.png",
     "promo_bar_enabled": true,
+    "fab_chat_title": "We are always here for you!",
     "sections": {
       "glazur-header": {
         "type": "glazur-header",

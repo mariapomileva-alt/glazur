@@ -1,5 +1,21 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-  "current": "Default",
+  "current": {
+    "footer_page_size_guide": "size-guide",
+    "size_guide_diagram_full": "shopify://shop_images/Screenshot_2026-04-16_at_00.06.28.png",
+    "size_guide_img_chest": "shopify://shop_images/Screenshot_2026-04-16_at_00.07.14.png",
+    "size_guide_img_waist": "shopify://shop_images/Screenshot_2026-04-16_at_00.08.23.png",
+    "size_guide_img_hips": "shopify://shop_images/Screenshot_2026-04-16_at_00.08.41.png",
+    "content_for_index": []
+  },
   "presets": {
     "Default": {}
   }

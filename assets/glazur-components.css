@@ -718,6 +718,64 @@ body.has-promo .site-header {
   font-style: italic;
 }
 
+/* 404 */
+.not-found-page {
+  padding: clamp(3.5rem, 10vw, 5.5rem) 1rem clamp(4rem, 12vw, 6rem);
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.not-found-page__eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-plum-mid, #8a6b78);
+  margin: 0 0 0.75rem;
+}
+
+.not-found-page__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4.5vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-plum, #2c1220);
+  margin: 0 0 1rem;
+  line-height: 1.15;
+}
+
+.not-found-page__lead {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-ink-muted);
+  margin: 0 0 1.75rem;
+}
+
+.not-found-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+}
+
+.not-found-page__hint {
+  font-size: 0.95rem;
+  color: var(--color-ink-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.not-found-page__hint a {
+  color: var(--color-plum);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
 .social-proof {
   text-align: center;
 }
@@ -873,6 +931,8 @@ body.has-promo .site-header {
 
 /* Footer */
 .site-footer {
+  position: relative;
+  z-index: 2;
   background: #88a620;
   color: var(--color-gold);
   padding: clamp(2.5rem, 6vw, 4rem) 0 2rem;
@@ -1058,7 +1118,7 @@ body.has-promo .site-header {
 }
 
 .site-header--shopru .logo__img {
-  filter: drop-shadow(0 1px 2px rgba(44, 18, 32, 0.12));
+  filter: drop-shadow(0 1px 1px rgba(44, 18, 32, 0.06));
 }
 
 /* Выпадающий каталог: панель белая — ссылки должны быть тёмными, не как в полосе шапки */
@@ -1113,6 +1173,51 @@ body.has-promo .site-header {
 
 .header-social__link--mail {
   font-size: 0.72rem;
+}
+
+/* Круглые «штамп»-иконки в шапке магазина (Telegram, VK, почта, WA, аккаунт) */
+.site-header--shopru .header-social--stamp {
+  gap: 0.42rem;
+}
+
+.site-header--shopru .header-social__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.55rem;
+  height: 2.55rem;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--color-shop-header);
+  text-decoration: none;
+  flex-shrink: 0;
+  box-shadow:
+    0 1px 3px rgba(44, 18, 32, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.65) inset;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.site-header--shopru .header-social__btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 12px rgba(44, 18, 32, 0.14),
+    0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+  background: #fffefb;
+}
+
+.site-header--shopru .header-social__btn--profile {
+  color: var(--color-plum, #4a1536);
+}
+
+.site-header--shopru .header-social__svg {
+  display: block;
+  width: 52%;
+  height: 52%;
+}
+
+.site-header--shopru .header-social__btn--profile .header-social__svg {
+  width: 56%;
+  height: 56%;
 }
 
 @media (min-width: 901px) {
@@ -1614,4 +1719,143 @@ body.has-promo .site-header {
   line-height: 1.55;
   max-width: 520px;
   margin: 0 auto;
+}
+
+/* Floating contact (messengers) */
+.glazur-fab {
+  position: fixed;
+  z-index: 280;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.glazur-fab__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.35rem;
+  height: 3.35rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(145deg, #ff8a4c, #ff6b35);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.glazur-fab__trigger:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(255, 107, 53, 0.55);
+}
+
+.glazur-fab__modal[hidden] {
+  display: none !important;
+}
+
+.glazur-fab__modal:not([hidden]) {
+  display: block;
+}
+
+.glazur-fab__modal {
+  position: fixed;
+  inset: 0;
+  z-index: 281;
+}
+
+.glazur-fab__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 28, 32, 0.35);
+  backdrop-filter: blur(2px);
+}
+
+.glazur-fab__sheet {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(22rem, calc(100vw - 2rem));
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.75rem 1.25rem 1.5rem;
+  box-shadow: 0 16px 48px rgba(80, 50, 60, 0.18);
+}
+
+.glazur-fab__close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-ink-muted, #6b5a62);
+  border-radius: 8px;
+}
+
+.glazur-fab__close:hover {
+  color: var(--color-plum, #5c2d50);
+  background: rgba(92, 45, 80, 0.06);
+}
+
+.glazur-fab__title {
+  font-family: var(--font-heading, Syne, sans-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 1.5rem 1.25rem;
+  color: var(--color-plum, #5c2d50);
+}
+
+.glazur-fab__actions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.glazur-fab__action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-ink, #3d2a32);
+  font-family: var(--font-body, Syne, sans-serif);
+  font-size: 0.78rem;
+  font-weight: 600;
+  min-width: 4.5rem;
+}
+
+.glazur-fab__action:hover .glazur-fab__label {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.glazur-fab__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.glazur-fab__circle--tg {
+  background: #229ed9;
+}
+
+.glazur-fab__circle--phone {
+  background: #1a1a1a;
+}
+
+.glazur-fab__circle--wa {
+  background: #25d366;
 }

@@ -94,7 +94,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Pick the store pages for Size guide, Care, and FAQ. Until pages exist, create them under Online Store → Pages, then select them here. If left empty, links use /pages/size-guide, /pages/care, and /pages/faq."
+        "content": "Pick the store pages for Size guide, Care, and FAQ. Until pages exist, create them under Online Store \u2192 Pages, then select them here. If left empty, links use /pages/size-guide, /pages/care, and /pages/faq."
       },
       {
         "type": "page",
@@ -110,6 +110,35 @@
         "type": "page",
         "id": "footer_page_faq",
         "label": "FAQ page"
+      },
+      {
+        "type": "header",
+        "content": "Size guide \u2014 diagrams"
+      },
+      {
+        "type": "paragraph",
+        "content": "Images appear on the Size guide page after the Chest, Waist, and Hips text. Upload placeholders now and replace with final size graphics anytime \u2014 no code edits."
+      },
+      {
+        "type": "image_picker",
+        "id": "size_guide_diagram_full",
+        "label": "Full-width diagram (optional)",
+        "info": "One wide illustration (e.g. full body / all measurements). Shown above the three-column row when set."
+      },
+      {
+        "type": "image_picker",
+        "id": "size_guide_img_chest",
+        "label": "Image \u2014 Chest / bust"
+      },
+      {
+        "type": "image_picker",
+        "id": "size_guide_img_waist",
+        "label": "Image \u2014 Waist"
+      },
+      {
+        "type": "image_picker",
+        "id": "size_guide_img_hips",
+        "label": "Image \u2014 Hips"
       }
     ]
   },
@@ -120,7 +149,7 @@
         "type": "text",
         "id": "promo_bar_text",
         "label": "Promo bar text",
-        "default": "Transform Your Day — Get 10% Off Your First Order"
+        "default": "Transform Your Day \u2014 Get 10% Off Your First Order"
       },
       {
         "type": "text",
@@ -150,7 +179,7 @@
         "type": "text",
         "id": "promo_success_message",
         "label": "Success message (after signup attempt)",
-        "default": "Thank you — check your inbox."
+        "default": "Thank you \u2014 check your inbox."
       }
     ]
   }

@@ -14,6 +14,19 @@
     "size_guide_img_chest": "shopify://shop_images/Screenshot_2026-04-16_at_00.07.14.png",
     "size_guide_img_waist": "shopify://shop_images/Screenshot_2026-04-16_at_00.08.23.png",
     "size_guide_img_hips": "shopify://shop_images/Screenshot_2026-04-16_at_00.08.41.png",
+    "promo_bar_enabled": true,
+    "sections": {
+      "glazur-header": {
+        "type": "glazur-header",
+        "settings": {}
+      },
+      "glazur-footer": {
+        "type": "glazur-footer",
+        "settings": {
+          "footer_tagline": "Natural fabrics and thoughtful details — from ordinary days to small moments of magic."
+        }
+      }
+    },
     "content_for_index": []
   },
   "presets": {

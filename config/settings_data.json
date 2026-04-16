@@ -9,6 +9,7 @@
  */
 {
   "current": {
+    "glazur_favicon_png": "shopify://shop_images/glazur-swan.svg",
     "collection_default": "all",
     "collection_blouses": "blouses",
     "collection_stripes": "parisian-stripe-tops",

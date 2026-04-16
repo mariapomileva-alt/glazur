@@ -9,6 +9,10 @@
  */
 {
   "current": {
+    "collection_default": "all",
+    "collection_blouses": "blouses",
+    "collection_stripes": "parisian-stripe-tops",
+    "collection_skirts": "skirts",
     "footer_page_size_guide": "size-guide",
     "size_guide_diagram_full": "shopify://shop_images/Screenshot_2026-04-16_at_00.06.28.png",
     "size_guide_img_chest": "shopify://shop_images/Screenshot_2026-04-16_at_00.07.14.png",
